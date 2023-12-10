@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -8,6 +9,9 @@ import Socials from "../components/about/socials";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/about.css";
 
@@ -48,13 +52,27 @@ const About = () => {
 								<div className="subtitle about-subtitle">
 									{INFO.about.description}
 								</div>
+
+								<div className="subtitle about-subtitle">
+									I'm currently a user researcher at Bubble, building the future of no-code. Outside of work, I'm a retired competitive dancer, a budding stand-up comedian, and an enthusiastic at-home bartender.
+								</div>
+
+								<div className="subtitle about-subtitle">
+									<Link to="https://drive.google.com/file/d/1rdatdTDXxdC-5Iaz9MLqDd1_CnZyy6Mo/view?usp=sharing">
+										View my resume{" "}
+										<FontAwesomeIcon
+											style={{ fontSize: "10px" }}
+											icon={faChevronRight}
+										/>
+									</Link>
+								</div>
 							</div>
 
 							<div className="about-left-side">
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpg"
+											src="homepage.jpg"
 											alt="about"
 											className="about-image"
 										/>
